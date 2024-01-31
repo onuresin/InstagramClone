@@ -1,1 +1,83 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+body {font-family: 'SF Pro Display', sans-serif;}
+.container {
+    width: 375px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginSection {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-inline: 34px;
+}
+.loginTop {
+    margin-top: 224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-inline: 21px;
+    & h3 {
+        color: #3A3A3A;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: normal;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+.loginBtn {
+    width: 100%;
+    background-color: #3797EF;
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 95px;
+    & a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.15px;
+        white-space: nowrap;
+    }
+}
+footer {
+    width: 84%;
+    display: flex;
+    gap: 5px;
+    padding: 18px 80px;
+    border-top: 1px solid #D3D3D3;
+    margin-top: 216px
+}
+footer p {
+    white-space: nowrap;
+    opacity: 0.4;
+}
+.registerBtn {
+    border: none;
+    background-color: transparent;
+    & a {
+        text-decoration: none;
+        color: #262626; 
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.005px;
+    }
+}
