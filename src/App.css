@@ -10,6 +10,7 @@ html,body {
     height: 100%;
 }
 body {font-family: 'SF Pro Display', sans-serif;}
+/*****App****/
 .container {
     width: 375px;
     margin: 0 auto;
@@ -74,10 +75,94 @@ footer p {
     background-color: transparent;
     & a {
         text-decoration: none;
-        color: #262626; 
+        color: #23244F; 
         font-size: 12px;
         font-weight: 600;
         line-height: normal;
         letter-spacing: -0.005px;
     }
+}
+/**Login Page**/
+.loginSection {
+    margin-top: 80px;
+    width: 345px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 39px;
+}
+.loginForm {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+   
+}
+.loginForm input {
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.10);
+    background: #FAFAFA;
+    padding: 14px 229px 14px 25px;
+}
+.goFeed {
+    margin-top: 51px;
+}
+.signUpWay {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+.loginSignUp {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+.loginSignUp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.15px; 
+    color: #3797EF; 
+}
+.signUpTop {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    & span {
+        width: 132px;
+        height: 1px;
+        background-color: gray;
+        opacity: 0.2;
+    }
+    & h4 {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal; 
+        color: rgba(0, 0, 0, 0.40); 
+    }
+}
+.signUpBot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    & p {
+        color: rgba(0, 0, 0, 0.40); 
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.15px; 
+    }
+    & a {
+        color: #3797EF;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.15px;    
+    }
+
 }

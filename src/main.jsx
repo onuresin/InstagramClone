@@ -1,9 +1,10 @@
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
+import Login from "./Components/Login.jsx";
+import Feed from "./Components/Feed.jsx";
 
 const router = createBrowserRouter([
   {
@@ -11,12 +12,16 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: 'login',
-    element: <Login />
+    path:"login",
+    element: <Login/>,
   },
   {
-    path: 'register',
+    path: "register",
     element: <Register />
+  },
+  {
+    path:"feed",
+    element:<Feed />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

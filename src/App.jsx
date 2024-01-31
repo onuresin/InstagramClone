@@ -1,5 +1,6 @@
-import './App.css'
+import './App.css';
 import { Link } from 'react-router-dom';
+import Instagram from '/images/instagram-mp.svg';
 
 function App() {
 
@@ -7,13 +8,13 @@ function App() {
   return (
     <>
       <div className="container">
-      <div className="loginSection">
+         <div className="loginSection">
             <div className="loginTop">
-                <img src="/instagram-mp.svg" alt="Instagram main page" />
+                <img src={Instagram} alt="Instagram main page" />
                 <h3>Arkadaşlarınızın fotoğraflarını ve videolarını görmek için <br/>giriş yapın veya kaydolun.</h3>
             </div>
             <div className="loginBot">
-                <button className='loginBtn'><Link to='register'>Giriş Yap</Link></button>
+                <button className='loginBtn'><Link to='login'>Giriş Yap</Link></button>
             </div>
         </div>
             <footer>
