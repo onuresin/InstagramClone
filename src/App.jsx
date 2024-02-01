@@ -2,8 +2,8 @@ import './App.css';
 import { Link } from 'react-router-dom';
 import Instagram from '/images/instagram-mp.svg';
 
-function App() {
 
+function App() {
 
   return (
     <>

@@ -211,3 +211,42 @@ footer p {
     background: #FAFAFA;
     padding: 14px 229px 14px 25px;
 }
+/***********************************************************************/
+/**FEED**/
+.feedHeader {
+    padding-block: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    gap: 17px;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+.topNav {
+    display: flex;
+    align-items: center;
+    padding-inline:20px; 
+    justify-content: space-between;
+    & img {
+        width: 122px;
+    }
+}
+.topNavSp {
+    display: flex;
+    gap: 12px;
+    & img {
+        width: 25px;
+    }
+}
+.storySection {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    & img {
+        width: 63px;
+        height: 63px;
+        border-radius: 50px;
+        border: 2px solid #6701E9 ;
+        overflow: hidden;
+        position: relative;
+    }
+}

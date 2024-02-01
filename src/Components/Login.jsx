@@ -9,7 +9,7 @@ function Login() {
                 <div className="loginSection">
                     <img src={Instagram}/>
                     <form className='loginForm'>
-                        <input required type="text" placeholder='Kullanıcı adı' name="username"/> <br />
+                        <input required type="mail" placeholder='E-Posta' name='email'/> <br />
                         <input required type="password" placeholder='Şifre' name="password" /> <br />
                         <button className='loginBtn goFeed'><Link to='feed'>Giriş Yap</Link></button>
                     </form>

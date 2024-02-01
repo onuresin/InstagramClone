@@ -23,6 +23,10 @@ const router = createBrowserRouter([
     path:"feed",
     element:<Feed />,
   },
+  {
+    path:"profile",
+    element:<Profile/>,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
