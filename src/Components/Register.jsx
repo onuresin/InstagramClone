@@ -1,11 +1,7 @@
-import Instagram from '/images/instagram-mp.svg';
 import { Link } from 'react-router-dom';
+import { supabase } from './Feed';
 import Backto from '/images/back-shape.svg'
-import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = 'https://mswfpsgvrdrfhfzpcnqo.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1zd2Zwc2d2cmRyZmhmenBjbnFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY3MTMyOTAsImV4cCI6MjAyMjI4OTI5MH0.FlDTZ4sgzqUgH3RiAyDmrFBcgtcrYsTEtVaiytuTjEI'
-const supabase = createClient(supabaseUrl, supabaseKey );
-
+import Instagram from '/images/instagram-mp.svg';
 function Register() {
     async function handleSubmit(e) {
         e.preventDefault(); // form gönderdiğimizde sayfanın değişmesini engellemek için        

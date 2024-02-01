@@ -250,3 +250,14 @@ footer p {
         position: relative;
     }
 }
+.bottomNav {
+    width: 100%;
+    padding:8px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & button {
+        background-color: transparent;
+        border: none;
+    }
+}
