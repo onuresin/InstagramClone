@@ -14,11 +14,11 @@ function App() {
                 <h3>Arkadaşlarınızın fotoğraflarını ve videolarını görmek için <br/>giriş yapın veya kaydolun.</h3>
             </div>
             <div className="loginBot">
-                <button className='loginBtn'><Link to='login'>Giriş Yap</Link></button>
+                <Link className='loginBtn' to='login'>Giriş Yap</Link>
             </div>
         </div>
             <footer>
-                <p>Hesabın yok mu?</p> <button className='registerBtn'><Link to='register'>Kaydol.</Link> </button>
+                <p>Hesabın yok mu?</p> <button className='registerBtn'><Link to="register">Kaydol.</Link> </button>
             </footer>
       </div>
     </>

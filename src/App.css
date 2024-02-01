@@ -48,15 +48,14 @@ body {font-family: 'SF Pro Display', sans-serif;}
     border: 0;
     border-radius: 5px;
     padding: 14px 95px;
-    & a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: normal;
-        letter-spacing: -0.15px;
-        white-space: nowrap;
-    }
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    white-space: nowrap;
+
 }
 footer {
     width: 84%;
@@ -106,6 +105,15 @@ footer p {
 }
 .goFeed {
     margin-top: 51px;
+    & a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.15px;
+        white-space: nowrap;
+    }
 }
 .signUpWay {
     display: flex;
@@ -164,5 +172,42 @@ footer p {
         line-height: normal;
         letter-spacing: -0.15px;    
     }
-
+}
+.loginFooter {
+    display: flex;
+    justify-content: center;
+}
+.backToMain {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+        color: rgba(0, 0, 0, 0.80); 
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.15px; 
+        text-decoration: none;
+}
+/*********************************************/
+/**REGISTER**/
+.registerInner {
+    margin-top: 80px;
+    width: 345px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 39px;
+}
+.registerForm {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.registerForm input {
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.10);
+    background: #FAFAFA;
+    padding: 14px 229px 14px 25px;
 }

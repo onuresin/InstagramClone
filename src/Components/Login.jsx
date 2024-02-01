@@ -1,6 +1,7 @@
 import Instagram from '/images/instagram-mp.svg';
 import { Link } from 'react-router-dom';
 import Facebook from '/images/facebook-Icon.svg';
+import Backto from '/images/back-shape.svg'
 function Login() {
     return (
         <>
@@ -21,13 +22,13 @@ function Login() {
                                 <span></span>
                             </div>
                             <div className="signUpBot">
-                                <p>Hesabın yok mu?</p> <button className='registerBtn'><Link to='register'>Kaydol.</Link> </button>
+                                <p>Hesabın yok mu?</p> <button className='registerBtn'><Link to="/register">Kaydol.</Link> </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer>
-                    
+                <footer className='loginFooter'>
+                    <Link className='backToMain' to="/"><img src={Backto} />Geri Dön</Link>
                 </footer>
             </div>
         </>
