@@ -11,7 +11,6 @@ export const supabase = createClient('https://mswfpsgvrdrfhfzpcnqo.supabase.co',
 
 export async function loader() {
     const { data: { user } } = await supabase.auth.getUser()
-    
     return user;
 }
 

@@ -248,6 +248,7 @@ footer p {
         border: 2px solid #6701E9 ;
         overflow: hidden;
         position: relative;
+        
     }
 }
 .bottomNav {
@@ -260,4 +261,19 @@ footer p {
         background-color: transparent;
         border: none;
     }
+}
+.kayitliKullanici {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 25px 20px;
+    & a {
+        text-decoration: none;
+        color: rgb(82, 1, 1);
+    }
+}
+.pwError {
+    text-align: center;
+    padding: 15px 12px;
+    text-decoration: underline;
+    color: #c02424;
 }

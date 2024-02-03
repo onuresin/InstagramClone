@@ -1,10 +1,11 @@
 import Instagram from '/images/instagram-mp.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from './Feed';
 import Facebook from '/images/facebook-Icon.svg';
 import Backto from '/images/back-shape.svg'
 
 function Login() {
+    const navigate = useNavigate();
     async function handleSubmit(e) {
         e.preventDefault(); // form gönderdiğimizde sayfanın değişmesini engellemek için        
 
@@ -13,7 +14,15 @@ function Login() {
         
 
         let { data, error } = await supabase.auth.signInWithPassword(formObj);
-        console.log(data);
+        
+        if (error) {
+            return (
+                
+              navigate('/')  
+            )               
+            
+        } 
+        navigate ('/feed');
   
     }
     return (
@@ -21,7 +30,7 @@ function Login() {
             <div className="container">
                 <div className="loginSection">
                     <img src={Instagram}/>
-                    <form onSubmit={handleSubmit} className='loginForm'>
+                    <form onSubmit={handleSubmit} className='loginForm' autoComplete='off'>
                         <input required type="mail" placeholder='E-Posta' name='email'/> <br />
                         <input required type="password" placeholder='Şifre' name="password" /> <br />
                         <button className='loginBtn goFeed'>Giriş Yap</button>
