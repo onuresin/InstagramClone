@@ -6,6 +6,8 @@ import Register from './Components/Register.jsx';
 import Login from "./Components/Login.jsx";
 import Feed, {loader as feedLoader} from "./Components/Feed.jsx";
 import Profile from "./Components/Profile.jsx";
+import Post from "./Components/Post.jsx";
+import GlobalFeed from "./Components/GlobalFeed.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path:"userProfile",
     element:<Profile />,
+  },
+  {
+    path:"Post",
+    element:<Post />,
+  },
+  {
+    path:"globalfeed",
+    element:<GlobalFeed />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

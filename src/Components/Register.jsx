@@ -29,7 +29,6 @@ function Register() {
     return (
         <>
             <div className="container">
-                {errorCode > 0 && <p>Kayıt olurken bir hata oluştu. Lütfen bilgilerinizi kontrol ederek tekrar deneyiniz.</p>}
                 {errorCode === 400 && <p className='kayitliKullanici'>Bu kullanıcı daha önce kayıt oluşturmuş. Lütfen giriş yapmak için <Link to="/login">Giriş Yap</Link> butonuna tıklayın.</p>}
                 <div className="registerInner">
                     <img src={Instagram}/>
