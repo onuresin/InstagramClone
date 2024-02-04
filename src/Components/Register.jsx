@@ -15,6 +15,12 @@ function Register() {
         const formObj = Object.fromEntries(formData);
         
         let { data, error } = await supabase.auth.signUp(formObj);
+
+        const { data: profile } = await supabase
+        .from('profiles')
+        .insert([{ name: formObj. name },])
+        .select();
+        
         
         if (error) {
             setErrorCode(error.status);
@@ -33,8 +39,7 @@ function Register() {
                 <div className="registerInner">
                     <img src={Instagram}/>
                     <form className='registerForm' onSubmit={handleSubmit} autoComplete='off'>
-                        {/* <input required type="text" placeholder='Kullanıcı Adı' name='username'/> <br />
-                        <input required type="text" placeholder='İsim Soyisim' name='realname'/> <br /> */}
+                        <input required type="text" placeholder='İsim Soyisim' name='name'/> <br />
                         <input required type="mail" placeholder='E-Posta' name='email'/> <br />
                         <input required type="password" placeholder='Şifre' name='password'/> 
                         <button className='loginBtn'>Kaydı Tamamla</button>

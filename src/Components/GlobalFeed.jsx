@@ -1,10 +1,32 @@
+import { Fragment, useEffect, useState } from 'react';
+import { supabase } from './Feed';
+import { useLoaderData } from 'react-router-dom';
 
+export async function loader() {
+
+    const { data: photoscomments } = await supabase.from('photoscomments').select('id, photoscomments, created_at, profiles(name)');
+    //console.log(photoscomments)
+    return data.session?.user?? data.session;
+}
 function GlobalFeed() {
+    const [user, setUser] = useState(useLoaderData());
+    useEffect(()=> {
+        async function fetchData() {
+            const userData = await loader();
+            setUser(userData);
+        }
+        fetchData();
+    }, [])
     return(
         <>
             <div className="container">
                 <div className="globalInner">
-                    <h4>Yakında buradayız</h4>
+                    <p>Kullanıcı: {user?.name}</p>
+                    {photoscomments.map(x =>
+                        <Fragment key={x.id}>
+                            <h5>{x.photoscomments}</h5>
+                            <h6>{x.profiles}</h6>
+                        </Fragment>)}
                 </div>
             </div>
         </>

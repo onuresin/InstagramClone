@@ -3,9 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from './Feed';
 import Facebook from '/images/facebook-Icon.svg';
 import Backto from '/images/back-shape.svg'
+import { useState } from 'react';
 
 function Login() {
     const navigate = useNavigate();
+    const [errorCode, setErrorCode] = useState(0);
     async function handleSubmit(e) {
         e.preventDefault(); // form gönderdiğimizde sayfanın değişmesini engellemek için        
 
@@ -16,10 +18,8 @@ function Login() {
         let { data, error } = await supabase.auth.signInWithPassword(formObj);
         
         if (error) {
-            return (
-                
-              navigate('/')  
-            )               
+            setErrorCode(error.status);
+            return;      
 
         } 
         navigate ('/feed');
@@ -37,6 +37,7 @@ function Login() {
                     </form>
                     <div className="loginSignUp">
                         <a href="#"><img src={Facebook}/> Login with Facebook</a>
+                        {errorCode > 0 && <p>Hata:Bilgilerinizi kontrol ederek tekrar deneyin...</p>}
                         <div className="signUpWay">
                             <div className="signUpTop">
                                 <span></span>
