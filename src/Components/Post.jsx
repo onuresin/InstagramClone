@@ -4,31 +4,17 @@ import Add from '/images/add.svg'
 import UserPage from '/images/user-profile.svg'
 import FeedHome from '/images/home-active.svg'
 import ImageUpload from "./ImageUpload";
+import Instagram from '/images/instagram-mp.svg';
 function Post() {
-    const [photo, setPhoto] = useState(true);
-    const [selfie, setSelfie] = useState(false);
-    const handlePhotoChange = (e) => {
-        setPhoto(e.target.files[0]);
-    }
-    const handleSelfieChange = (e) => {
-        setSelfie(e.target.files[0]);
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
 
     return(
         <>
             <div className="container">
+                <div className="topNav">
+                        <img src={Instagram}/>
+                </div>
                 <div className="innerPost">
                     <ImageUpload />
-                    <form onSubmit={handleSubmit}>
-                        <label for="photo">Arka Kamera</label> <br />
-                        <input type="file" capture="environment" onChange={handlePhotoChange} /> <br />
-                        <label for="selfie">Selfie</label> <br />
-                        <input type="file" capture='user' onChange={handleSelfieChange} /> <br />
-                    </form>
                 </div>
                 <div className="bottomNav">
                     <button><Link to='/feed'><img src={FeedHome} alt="Feed" /></Link> </button>

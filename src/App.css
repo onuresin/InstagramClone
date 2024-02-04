@@ -277,3 +277,14 @@ footer p {
     text-decoration: underline;
     color: #c02424;
 }
+/****UPLOAD FORM ***/
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.uploadedImage {
+    padding-top: 25px;
+    max-width: 375px;
+}

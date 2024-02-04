@@ -7,7 +7,6 @@ import Add from '/images/add.svg'
 import UserPage from '/images/user-profile.svg'
 import { Link, useLoaderData } from 'react-router-dom';
 import { createClient } from '@supabase/supabase-js'
-import GlobalFeed from './GlobalFeed';
 export const supabase = createClient('https://mswfpsgvrdrfhfzpcnqo.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1zd2Zwc2d2cmRyZmhmenBjbnFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY3MTMyOTAsImV4cCI6MjAyMjI4OTI5MH0.FlDTZ4sgzqUgH3RiAyDmrFBcgtcrYsTEtVaiytuTjEI' );
 
 export async function loader() {
