@@ -5,15 +5,16 @@ import { useLoaderData } from 'react-router-dom';
 export async function loader() {
 
     const { data: photoscomments } = await supabase.from('photoscomments').select('id, photoscomments, created_at, profiles(name)');
-    //console.log(photoscomments)
+
     return data.session?.user?? data.session;
 }
 function GlobalFeed() {
     const [user, setUser] = useState(useLoaderData());
+    const [photoscomments, setPhotosComments] = useState([]);
     useEffect(()=> {
         async function fetchData() {
             const userData = await loader();
-            setUser(userData);
+            setPhotosComments(commentsData);
         }
         fetchData();
     }, [])

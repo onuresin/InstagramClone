@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Add from '/images/add.svg'
 import UserPage from '/images/user-profile.svg'
 import FeedHome from '/images/home-active.svg'
+import ImageUpload from "./ImageUpload";
 function Post() {
     const [photo, setPhoto] = useState(true);
     const [selfie, setSelfie] = useState(false);
@@ -21,6 +22,7 @@ function Post() {
         <>
             <div className="container">
                 <div className="innerPost">
+                    <ImageUpload />
                     <form onSubmit={handleSubmit}>
                         <label for="photo">Arka Kamera</label> <br />
                         <input type="file" capture="environment" onChange={handlePhotoChange} /> <br />

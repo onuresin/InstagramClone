@@ -8,6 +8,7 @@ import Feed, {loader as feedLoader} from "./Components/Feed.jsx";
 import Profile from "./Components/Profile.jsx";
 import Post from "./Components/Post.jsx";
 import GlobalFeed from "./Components/GlobalFeed.jsx";
+import ImageUpload from "./Components/ImageUpload.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path:"globalfeed",
     element:<GlobalFeed />,
+  },
+  {
+    path:"/imageupload",
+    element:<ImageUpload />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -35,7 +35,7 @@ export default function Feed() {
                     </div>
                 </div>
                 <div className="feedContainer">
-                    <GlobalFeed />
+                    
                 </div>
                 <div className="bottomNav">
                     <button><Link to='/feed'><img src={FeedHome} alt="Feed" /></Link> </button>
