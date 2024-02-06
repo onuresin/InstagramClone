@@ -39,7 +39,7 @@ export default function Feed() {
                 <div className="bottomNav">
                     <button><Link to='/feed'><img src={FeedHome} alt="Feed" /></Link> </button>
                     <button><Link to='/post'><img src={Add}/></Link></button>
-                    <button><Link to='/Profile'><img src={UserPage} alt="Feed" /></Link> </button>
+                    <button><Link to='/userProfile'><img src={UserPage} alt="Feed" /></Link> </button>
                 </div>
             </div>
         </>
